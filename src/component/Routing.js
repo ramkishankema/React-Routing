@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Link} from 'react-router-dom';
 
 import Home from './Home';
-import Posts from './Post';
+import Posts from './Technologies';
 import Profile from './Profile';
 import PostDetails from './PostDetails';
 import Lifecycle from './lifecycle';
@@ -24,7 +24,7 @@ const Routing =  () => {
                         <div className="collapse navbar-collapse" id="myNavbar">
                         <ul className="nav navbar-nav">
                             <li><Link to="/">Home</Link></li>
-                            <li><Link to="/post">Post</Link></li>
+                            <li><Link to="/technologies">Courses</Link></li>
                             <li><Link to="/profile">Profile</Link></li>
                             <li><Link to="/lifecycle">LifeCycle</Link></li>
                         </ul>
@@ -32,8 +32,8 @@ const Routing =  () => {
                     </div>
                 </nav>
                 <Route exact path="/" component={Home}></Route>
-                <Route path="/post" component={Posts}></Route>
-                <Route path="/posts/:topic" component={PostDetails}></Route>
+                <Route path="/technologies" component={Posts}></Route>
+                <Route path="/technology/:topic" component={PostDetails}></Route>
                 <Route path="/profile" component={Profile}></Route>
                 <Route path="/lifecycle" component={Lifecycle}></Route>
             </div>
